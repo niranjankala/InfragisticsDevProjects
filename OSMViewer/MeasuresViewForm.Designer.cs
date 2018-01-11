@@ -27,25 +27,18 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
-            this.ultraTree1 = new Infragistics.Win.UltraWinTree.UltraTree();
+        {            
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.ultraTree1)).BeginInit();
+            this.measuresTreeView = new Infragistics.Win.UltraWinTree.UltraTree();
+            this.ultraTreePrintDocument1 = new Infragistics.Win.UltraWinTree.UltraTreePrintDocument(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.measuresTreeView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ultraTree1
-            // 
-            this.ultraTree1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ultraTree1.Location = new System.Drawing.Point(264, 0);
-            this.ultraTree1.Name = "ultraTree1";
-            this.ultraTree1.Size = new System.Drawing.Size(460, 450);
-            this.ultraTree1.TabIndex = 0;
-            this.ultraTree1.Layout += new System.Windows.Forms.LayoutEventHandler(this.ultraTree1_Layout);
             // 
             // button1
             // 
@@ -76,13 +69,30 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.ultraTree1);
+            this.panel3.Controls.Add(this.measuresTreeView);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(724, 450);
             this.panel3.TabIndex = 4;
+            // 
+            // measuresTreeView
+            // 
+            this.measuresTreeView.ColumnSettings.AllowCellEdit = Infragistics.Win.UltraWinTree.AllowCellEdit.ReadOnly;
+            this.measuresTreeView.ColumnSettings.AllowColMoving = Infragistics.Win.Layout.GridBagLayoutAllowMoving.None;
+            this.measuresTreeView.ColumnSettings.AllowSorting = Infragistics.Win.DefaultableBoolean.False;
+            this.measuresTreeView.ColumnSettings.AutoFitColumns = Infragistics.Win.UltraWinTree.AutoFitColumns.ResizeAllColumns;
+            this.measuresTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.measuresTreeView.Location = new System.Drawing.Point(264, 0);
+            this.measuresTreeView.Name = "measuresTreeView";
+            this.measuresTreeView.Size = new System.Drawing.Size(460, 450);
+            this.measuresTreeView.TabIndex = 5;
+            this.measuresTreeView.ViewStyle = Infragistics.Win.UltraWinTree.ViewStyle.OutlookExpress;
+            this.measuresTreeView.InitializeDataNode += new Infragistics.Win.UltraWinTree.InitializeDataNodeEventHandler(this.measuresTreeView_InitializeDataNode);
+            this.measuresTreeView.BeforeDataNodesCollectionPopulated += new Infragistics.Win.UltraWinTree.BeforeDataNodesCollectionPopulatedEventHandler(this.measuresTreeView_BeforeDataNodesCollectionPopulated);
+            this.measuresTreeView.AfterDataNodesCollectionPopulated += new Infragistics.Win.UltraWinTree.AfterDataNodesCollectionPopulatedEventHandler(this.measuresTreeView_AfterDataNodesCollectionPopulated);
+            this.measuresTreeView.ColumnSetGenerated += new Infragistics.Win.UltraWinTree.ColumnSetGeneratedEventHandler(this.measuresTreeView_ColumnSetGenerated);
             // 
             // MeasuresViewForm
             // 
@@ -93,20 +103,20 @@
             this.Controls.Add(this.panel2);
             this.Name = "MeasuresViewForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.ultraTree1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.measuresTreeView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-
-        private Infragistics.Win.UltraWinTree.UltraTree ultraTree1;
+        #endregion        
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private Infragistics.Win.UltraWinTree.UltraTree measuresTreeView;
+        private Infragistics.Win.UltraWinTree.UltraTreePrintDocument ultraTreePrintDocument1;
     }
 }
 

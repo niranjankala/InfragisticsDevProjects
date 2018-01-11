@@ -44,38 +44,68 @@ namespace OpenStudioMeasuresViewer
                         m = XMLHelper.Deserialize<measure>(File.ReadAllText(measureFilePath));
                     }
                     catch (Exception ex)
-                    {                        
+                    {
                     }
                     if (m != null)
                     {
-                        SimulationMeasureType measureType = SimulationMeasureType.None;
-                        foreach (var item in m.attributes)
-                        {
-                            if (item?.name == "Measure Type" && Enum.TryParse<SimulationMeasureType>(item.value, out measureType))
-                            {
-                                m.MeasureType = measureType;
-                                break;
-                            }
-                        }
-                        measures.Add(m); 
+                        //SimulationMeasureType measureType = SimulationMeasureType.None;
+                        //foreach (var item in m.attributes)
+                        //{
+                        //    if (item?.name == "Measure Type" && Enum.TryParse<SimulationMeasureType>(item.value, out measureType))
+                        //    {
+                        //        m.MeasureType = measureType;
+                        //        break;
+                        //    }
+                        //}
+                        measures.Add(m);
                     }
                 }
 
 
-
+                List<SimulationMeasure> simulationMeasures = new List<SimulationMeasure>();
                 foreach (Term term in result.term)
                 {
-                    foreach (Term childTerm in term.term)
+                    SimulationMeasure measureCategory = new SimulationMeasure();
+                    measureCategory.Name = term.name;
+                    measureCategory.Description = term.description;
+                    simulationMeasures.Add(measureCategory);
+
+                    if (term.term?.Count > 0)
                     {
-                        string measureTag = string.Format("{0}.{1}", term.name, childTerm.name);
-
-                        List<measure> termMeasures = measures.Where(m => m.tags.tag == measureTag).ToList();
-                        childTerm.Measures = termMeasures;
-
+                        measureCategory.Measures = new List<SimulationMeasure>();
+                        foreach (Term childTerm in term.term)
+                        {
+                            SimulationMeasure childCategory = new SimulationMeasure();
+                            childCategory.Name = childTerm.name;
+                            childCategory.Description = childTerm.description;
+                            measureCategory.Measures.Add(childCategory);
+                            string measureTag = string.Format("{0}.{1}", term.name, childTerm.name);
+                            List<measure> termMeasures = measures.Where(m => m.tags.tag == measureTag).ToList();
+                            if (termMeasures?.Count > 0)
+                            {
+                                childCategory.Measures = new List<SimulationMeasure>();
+                                foreach (measure simMeausre in termMeasures)
+                                {
+                                    SimulationMeasure termMeasure = new SimulationMeasure();
+                                    termMeasure.Name = simMeausre.name;
+                                    termMeasure.Description = simMeausre.description;
+                                    SimulationMeasureType measureType = SimulationMeasureType.None;
+                                    foreach (var item in simMeausre.attributes)
+                                    {
+                                        if (item?.name == "Measure Type" && Enum.TryParse<SimulationMeasureType>(item.value, out measureType))
+                                        {
+                                            termMeasure.Type = measureType;
+                                            break;
+                                        }
+                                    }
+                                    childCategory.Measures.Add(termMeasure);
+                                }
+                            }
+                        }
                     }
                 }
 
-                ultraTree1.DataSource = result.term;
+                measuresTreeView.DataSource = simulationMeasures;
             }
         }
 
@@ -97,6 +127,32 @@ namespace OpenStudioMeasuresViewer
 
         private void ultraTree1_Layout(object sender, LayoutEventArgs e)
         {
+
+        }
+
+        private void measuresTreeView_BeforeDataNodesCollectionPopulated(object sender, Infragistics.Win.UltraWinTree.BeforeDataNodesCollectionPopulatedEventArgs e)
+        {
+
+        }
+
+        private void measuresTreeView_InitializeDataNode(object sender, Infragistics.Win.UltraWinTree.InitializeDataNodeEventArgs e)
+        {
+            //if (e.Node.Nodes.Count == 0)
+            //    e.Node.Visible = false;
+        }
+
+        private void measuresTreeView_AfterDataNodesCollectionPopulated(object sender, Infragistics.Win.UltraWinTree.AfterDataNodesCollectionPopulatedEventArgs e)
+        {
+
+        }
+
+        private void measuresTreeView_ColumnSetGenerated(object sender, Infragistics.Win.UltraWinTree.ColumnSetGeneratedEventArgs e)
+        {
+            foreach (var item in e.ColumnSet.Columns)
+            {
+                if (item.Key != "Name" && !item.DataType.IsGenericType)
+                    item.Visible = false;
+            }
 
         }
     }
