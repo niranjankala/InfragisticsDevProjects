@@ -31,11 +31,52 @@ namespace OpenStudioMeasuresViewer
         {
             string measureFolder = ApplicationManager.Instance.GetMeasuresFolder();
             string aa = "http://bcl.nrel.gov/api/taxonomy/measure";
-
-
             taxonomy result = DownloadAndDeserializeJsonData<taxonomy>(aa);
-            ultraTree1.DataSource = result.term;
-            
+            if (result != null)
+            {
+                IEnumerable<string> measureFiles = Directory.EnumerateFiles(measureFolder, "measure.xml", SearchOption.AllDirectories);
+                List<measure> measures = new List<measure>();
+                foreach (string measureFilePath in measureFiles)
+                {
+                    measure m = null;
+                    try
+                    {
+                        m = XMLHelper.Deserialize<measure>(File.ReadAllText(measureFilePath));
+                    }
+                    catch (Exception ex)
+                    {                        
+                    }
+                    if (m != null)
+                    {
+                        SimulationMeasureType measureType = SimulationMeasureType.None;
+                        foreach (var item in m.attributes)
+                        {
+                            if (item?.name == "Measure Type" && Enum.TryParse<SimulationMeasureType>(item.value, out measureType))
+                            {
+                                m.MeasureType = measureType;
+                                break;
+                            }
+                        }
+                        measures.Add(m); 
+                    }
+                }
+
+
+
+                foreach (Term term in result.term)
+                {
+                    foreach (Term childTerm in term.term)
+                    {
+                        string measureTag = string.Format("{0}.{1}", term.name, childTerm.name);
+
+                        List<measure> termMeasures = measures.Where(m => m.tags.tag == measureTag).ToList();
+                        childTerm.Measures = termMeasures;
+
+                    }
+                }
+
+                ultraTree1.DataSource = result.term;
+            }
         }
 
         private static T DownloadAndDeserializeJsonData<T>(string url) where T : new()
@@ -52,6 +93,11 @@ namespace OpenStudioMeasuresViewer
                            ? JsonConvert.DeserializeObject<T>(jsonData)
                            : new T();
             }
+        }
+
+        private void ultraTree1_Layout(object sender, LayoutEventArgs e)
+        {
+
         }
     }
 }

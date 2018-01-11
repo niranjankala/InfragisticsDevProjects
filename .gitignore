@@ -6,3 +6,5 @@
 /OSMViewer/obj/Debug
 *.licx
 *.suo
+/packages/Newtonsoft.Json.10.0.3
+/.vs/InfragisticsDevProjects/v15/Server/sqlite3

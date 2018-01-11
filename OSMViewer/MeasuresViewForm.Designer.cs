@@ -45,6 +45,7 @@
             this.ultraTree1.Name = "ultraTree1";
             this.ultraTree1.Size = new System.Drawing.Size(460, 450);
             this.ultraTree1.TabIndex = 0;
+            this.ultraTree1.Layout += new System.Windows.Forms.LayoutEventHandler(this.ultraTree1_Layout);
             // 
             // button1
             // 
