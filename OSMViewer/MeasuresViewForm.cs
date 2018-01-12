@@ -155,5 +155,10 @@ namespace OpenStudioMeasuresViewer
             }
 
         }
+
+        private void MeasuresViewForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
