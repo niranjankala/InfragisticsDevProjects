@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Infragistics.Win.UltraWinDataSource;
+using Infragistics.Win.UltraWinGrid;
+using Newtonsoft.Json;
 using Simergy.Common.Helpers;
 using System;
 using System.Collections.Generic;
@@ -24,7 +26,7 @@ namespace OpenStudioMeasuresViewer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateMeasuresFolderStructure();
+            //CreateMeasuresFolderStructure();
         }
 
         public void CreateMeasuresFolderStructure()
@@ -158,7 +160,74 @@ namespace OpenStudioMeasuresViewer
 
         private void MeasuresViewForm_Load(object sender, EventArgs e)
         {
+            CreateMeasuresFolderStructure();
+        }
 
+        private void ucmdNewConfiguration_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UltraDataRow configRow;
+                configRow = this.udsSimulationGroupList.Rows.Add();
+                configRow["Configuration"] = "Config-1";
+                UltraDataRow measureRow = configRow.GetChildRows("ZONE").Add();
+                measureRow["Configuration"] = "Measure-1";
+                UltraDataRow simRunRow = measureRow.GetChildRows("SIMRUN").Add();
+                simRunRow["Configuration"] = "SimRun-1";
+
+                this.ugSimulationgropus.DataSource = this.udsSimulationGroupList;               
+               
+            }
+            catch (Exception ex)
+            {
+                if (this.ParentForm != null)
+                {
+                   
+                        MessageBox.Show(ex.Message);
+                    
+                }
+            }
+        }
+
+        private void ugSimulationgropus_InitializeLayout(object sender, Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs e)
+        {           
+            e.Layout.Bands[1].Columns["Delete Row"].Width = 20;
+            e.Layout.Bands[1].Columns["Change Measure Order"].Width = 20;
+            
+        }
+
+        private void btnAddMeasure_Click(object sender, EventArgs e)
+        {
+            //if (this.measuresTreeView.SelectedNodes
+            UltraGridRow parentGridRow = null;
+            UltraGridRow childGridRow = null;
+
+
+            
+
+            if (this.ugSimulationgropus.ActiveRow != null)
+            {
+                parentGridRow = (UltraGridRow)ugSimulationgropus.ActiveRow;
+            }
+
+            if (parentGridRow != null && parentGridRow.Band.Key == "ZONE")
+            {
+                childGridRow = parentGridRow;
+                parentGridRow = parentGridRow.ParentRow;
+            }
+
+            if (parentGridRow == null && this.ugSimulationgropus.Rows.Count == 1)
+            {
+                this.ugSimulationgropus.ActiveRow = ugSimulationgropus.Rows[0];
+                parentGridRow = (UltraGridRow)ugSimulationgropus.Rows[0];
+            }
+
+            if (parentGridRow != null && (parentGridRow.Band.Index == 0 || parentGridRow.Band.Index == 1) &&
+                                   parentGridRow.Band.Key != "ZONE")
+            {
+
+            }
+               
         }
     }
 }

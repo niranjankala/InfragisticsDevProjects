@@ -142,6 +142,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
@@ -159,6 +160,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em64-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em-gray24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em-gray32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm64-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm-gray24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm-gray32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm64-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm-gray24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm-gray32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
