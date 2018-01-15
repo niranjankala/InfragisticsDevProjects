@@ -135,6 +135,18 @@
         SFJfJypcFWAAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="appearance13.ImageBackground" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
+        1wAADdcBQiibeAAAALNJREFUOE+tk8ENgzAQBKEIWqAFXnxSUTpIekIUwys/OoBvsmPF0mKZSNHxGHG+
+        21v5bNO8hrGkF08xifULMTlqB70vWnEXu3ifQA0N2oMBiVnUmmqgTSbZANea8Bf0JAPmKre9iM3WxORc
+        Q0+PAYfjBYSduAkagZhcafLAgBP2ZG6gxtdj3xVMFLgmT4KbnDXDeolBeITwIYavEUIPCcJPOZvgWo7j
+        UEOTmsENMn/8zmPzAbIl/S6trw/+AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>568, 17</value>
+  </metadata>
   <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>665, 17</value>
   </metadata>

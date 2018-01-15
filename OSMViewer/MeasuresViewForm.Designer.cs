@@ -76,22 +76,22 @@
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinDataSource.UltraDataBand ultraDataBand1 = new Infragistics.Win.UltraWinDataSource.UltraDataBand("ZONE");
-            Infragistics.Win.UltraWinDataSource.UltraDataBand ultraDataBand2 = new Infragistics.Win.UltraWinDataSource.UltraDataBand("SIMRUN");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn1 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Configuration");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn2 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Date");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn3 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Request Set");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn4 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Simulation Parameters");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn5 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Output Format Set");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn6 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Configuration");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn7 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Date");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn8 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Request Set");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn9 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Simulation Parameters");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn10 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Output Format Set");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn11 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Configuration");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn12 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Date");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn13 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Request Set");
-            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn14 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Simulation Parameters");
+            Infragistics.Win.UltraWinDataSource.UltraDataBand ultraDataBand3 = new Infragistics.Win.UltraWinDataSource.UltraDataBand("ZONE");
+            Infragistics.Win.UltraWinDataSource.UltraDataBand ultraDataBand4 = new Infragistics.Win.UltraWinDataSource.UltraDataBand("SIMRUN");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn15 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Configuration");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn16 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Date");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn17 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Request Set");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn18 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Simulation Parameters");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn19 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Output Format Set");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn20 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Configuration");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn21 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Date");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn22 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Request Set");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn23 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Simulation Parameters");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn24 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Output Format Set");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn25 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Configuration");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn26 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Date");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn27 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Request Set");
+            Infragistics.Win.UltraWinDataSource.UltraDataColumn ultraDataColumn28 = new Infragistics.Win.UltraWinDataSource.UltraDataColumn("Simulation Parameters");
             this.ucmbOutputReqTemplates = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.ucmbSimulationTemplates = new Infragistics.Win.UltraWinEditors.UltraComboEditor();
             this.button1 = new System.Windows.Forms.Button();
@@ -413,7 +413,8 @@
             ultraGridColumn28.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn28.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn28.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn28.Width = 50;
+            ultraGridColumn28.Width = 383;
+            ultraGridColumn29.AutoSizeEdit = Infragistics.Win.DefaultableBoolean.False;
             appearance7.BackColor = System.Drawing.Color.White;
             ultraGridColumn29.CellAppearance = appearance7;
             ultraGridColumn29.Header.Editor = null;
@@ -468,33 +469,27 @@
             ultraGridColumn1.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always;
             appearance12.BackColor = System.Drawing.SystemColors.ButtonFace;
             appearance12.ImageBackground = ((System.Drawing.Image)(resources.GetObject("appearance12.ImageBackground")));
-            appearance12.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched;
             ultraGridColumn1.CellButtonAppearance = appearance12;
             ultraGridColumn1.Header.Editor = null;
             ultraGridColumn1.Header.VisiblePosition = 6;
-            ultraGridColumn1.MaxWidth = 20;
-            ultraGridColumn1.MinLength = 20;
             ultraGridColumn1.RowLayoutColumnInfo.OriginX = 10;
             ultraGridColumn1.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn1.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn1.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn1.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn1.Width = 16;
-            ultraGridColumn2.AutoSizeMode = Infragistics.Win.UltraWinGrid.ColumnAutoSizeMode.None;
+            ultraGridColumn1.Width = 14;
             ultraGridColumn2.ButtonDisplayStyle = Infragistics.Win.UltraWinGrid.ButtonDisplayStyle.Always;
             appearance13.BackColor = System.Drawing.SystemColors.ButtonFace;
-            appearance13.ImageBackground = global::OpenStudioMeasuresViewer.Properties.Resources.delete16x16;
-            appearance13.ImageBackgroundStyle = Infragistics.Win.ImageBackgroundStyle.Stretched;
+            appearance13.ImageBackground = ((System.Drawing.Image)(resources.GetObject("appearance13.ImageBackground")));
             ultraGridColumn2.CellButtonAppearance = appearance13;
             ultraGridColumn2.Header.Editor = null;
             ultraGridColumn2.Header.VisiblePosition = 7;
-            ultraGridColumn2.MaxWidth = 20;
             ultraGridColumn2.RowLayoutColumnInfo.OriginX = 12;
             ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn2.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn2.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.Button;
-            ultraGridColumn2.Width = 16;
+            ultraGridColumn2.Width = 14;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn28,
             ultraGridColumn29,
@@ -505,7 +500,7 @@
             ultraGridColumn33,
             ultraGridColumn1,
             ultraGridColumn2});
-            ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.GroupLayout;
+            ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             ultraGridBand3.ColHeadersVisible = false;
             ultraGridColumn5.Header.Editor = null;
             ultraGridColumn5.Header.VisiblePosition = 0;
@@ -552,6 +547,7 @@
             appearance18.BackColor = System.Drawing.SystemColors.Highlight;
             appearance18.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.ugSimulationgropus.DisplayLayout.Override.ActiveRowAppearance = appearance18;
+            this.ugSimulationgropus.DisplayLayout.Override.AllowColSizing = Infragistics.Win.UltraWinGrid.AllowColSizing.Free;
             this.ugSimulationgropus.DisplayLayout.Override.AllowDelete = Infragistics.Win.DefaultableBoolean.True;
             this.ugSimulationgropus.DisplayLayout.Override.AllowUpdate = Infragistics.Win.DefaultableBoolean.True;
             this.ugSimulationgropus.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
@@ -562,7 +558,7 @@
             appearance20.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
             this.ugSimulationgropus.DisplayLayout.Override.CellAppearance = appearance20;
             this.ugSimulationgropus.DisplayLayout.Override.CellPadding = 0;
-            this.ugSimulationgropus.DisplayLayout.Override.ColumnAutoSizeMode = Infragistics.Win.UltraWinGrid.ColumnAutoSizeMode.AllRowsInBand;
+            this.ugSimulationgropus.DisplayLayout.Override.DefaultRowHeight = 23;
             appearance21.BackColor = System.Drawing.SystemColors.Control;
             appearance21.BackColor2 = System.Drawing.SystemColors.ControlDark;
             appearance21.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
@@ -590,27 +586,27 @@
             // 
             // udsSimulationGroupList
             // 
-            ultraDataBand2.Columns.AddRange(new object[] {
-            ultraDataColumn1,
-            ultraDataColumn2,
-            ultraDataColumn3,
-            ultraDataColumn4,
-            ultraDataColumn5});
-            ultraDataBand1.ChildBands.AddRange(new object[] {
-            ultraDataBand2});
-            ultraDataBand1.Columns.AddRange(new object[] {
-            ultraDataColumn6,
-            ultraDataColumn7,
-            ultraDataColumn8,
-            ultraDataColumn9,
-            ultraDataColumn10});
+            ultraDataBand4.Columns.AddRange(new object[] {
+            ultraDataColumn15,
+            ultraDataColumn16,
+            ultraDataColumn17,
+            ultraDataColumn18,
+            ultraDataColumn19});
+            ultraDataBand3.ChildBands.AddRange(new object[] {
+            ultraDataBand4});
+            ultraDataBand3.Columns.AddRange(new object[] {
+            ultraDataColumn20,
+            ultraDataColumn21,
+            ultraDataColumn22,
+            ultraDataColumn23,
+            ultraDataColumn24});
             this.udsSimulationGroupList.Band.ChildBands.AddRange(new object[] {
-            ultraDataBand1});
+            ultraDataBand3});
             this.udsSimulationGroupList.Band.Columns.AddRange(new object[] {
-            ultraDataColumn11,
-            ultraDataColumn12,
-            ultraDataColumn13,
-            ultraDataColumn14});
+            ultraDataColumn25,
+            ultraDataColumn26,
+            ultraDataColumn27,
+            ultraDataColumn28});
             this.udsSimulationGroupList.Band.Key = "GROUP";
             // 
             // ToolTip

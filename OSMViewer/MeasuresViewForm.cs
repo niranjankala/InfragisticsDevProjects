@@ -175,25 +175,31 @@ namespace OpenStudioMeasuresViewer
                 UltraDataRow simRunRow = measureRow.GetChildRows("SIMRUN").Add();
                 simRunRow["Configuration"] = "SimRun-1";
 
-                this.ugSimulationgropus.DataSource = this.udsSimulationGroupList;               
-               
+                this.ugSimulationgropus.DataSource = this.udsSimulationGroupList;
+
             }
             catch (Exception ex)
             {
                 if (this.ParentForm != null)
                 {
-                   
-                        MessageBox.Show(ex.Message);
-                    
+
+                    MessageBox.Show(ex.Message);
+
                 }
             }
         }
 
         private void ugSimulationgropus_InitializeLayout(object sender, Infragistics.Win.UltraWinGrid.InitializeLayoutEventArgs e)
-        {           
-            e.Layout.Bands[1].Columns["Delete Row"].Width = 20;
-            e.Layout.Bands[1].Columns["Change Measure Order"].Width = 20;
-            
+        {
+            e.Layout.Override.AllowColSizing = AllowColSizing.Free;
+            e.Layout.Override.DefaultRowHeight = 23;
+            e.Layout.Bands[1].RowLayoutStyle = RowLayoutStyle.ColumnLayout;
+            e.Layout.Bands[1].Columns["Delete Row"].Hidden = false;
+            e.Layout.Bands[1].Columns["Change Measure Order"].Hidden = false;
+
+            e.Layout.Bands[1].Override.RowAppearance.BackColor = Color.LightBlue;
+
+
         }
 
         private void btnAddMeasure_Click(object sender, EventArgs e)
@@ -203,7 +209,7 @@ namespace OpenStudioMeasuresViewer
             UltraGridRow childGridRow = null;
 
 
-            
+
 
             if (this.ugSimulationgropus.ActiveRow != null)
             {
@@ -227,7 +233,7 @@ namespace OpenStudioMeasuresViewer
             {
 
             }
-               
+
         }
     }
 }
