@@ -127,7 +127,7 @@ namespace OpenStudioMeasuresViewer
             }
         }
 
-        private void ultraTree1_Layout(object sender, LayoutEventArgs e)
+        private void measuresTreeView_Layout(object sender, LayoutEventArgs e)
         {
 
         }
@@ -141,15 +141,30 @@ namespace OpenStudioMeasuresViewer
         {
             //if (e.Node.Nodes.Count == 0)
             //    e.Node.Visible = false;
+
+            if (e.Node.IsRootLevelNode)
+            {
+                e.Node.Override.NodeAppearance.BackColor = Color.Gray;
+                e.Node.Override.NodeAppearance.ForeColor = Color.White;
+                e.Node.Override.NodeAppearance.BorderColor = Color.Black;
+                e.Node.Override.NodeAppearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True;
+                e.Node.Override.BorderStyleNode = Infragistics.Win.UIElementBorderStyle.Solid;
+            }
+            else
+            {
+
+            }
         }
 
         private void measuresTreeView_AfterDataNodesCollectionPopulated(object sender, Infragistics.Win.UltraWinTree.AfterDataNodesCollectionPopulatedEventArgs e)
         {
+            
 
         }
 
         private void measuresTreeView_ColumnSetGenerated(object sender, Infragistics.Win.UltraWinTree.ColumnSetGeneratedEventArgs e)
         {
+           
             foreach (var item in e.ColumnSet.Columns)
             {
                 if (item.Key != "Name" && !item.DataType.IsGenericType)
