@@ -1,5 +1,6 @@
 ﻿using Infragistics.Win.UltraWinDataSource;
 using Infragistics.Win.UltraWinGrid;
+using Infragistics.Win.UltraWinTree;
 using Newtonsoft.Json;
 using Simergy.Common.Helpers;
 using System;
@@ -140,8 +141,7 @@ namespace OpenStudioMeasuresViewer
         private void measuresTreeView_InitializeDataNode(object sender, Infragistics.Win.UltraWinTree.InitializeDataNodeEventArgs e)
         {
             //if (e.Node.Nodes.Count == 0)
-            //    e.Node.Visible = false;
-
+            //    e.Node.Visible = false;            
             if (e.Node.IsRootLevelNode)
             {
                 e.Node.Override.NodeAppearance.BackColor = Color.Gray;
@@ -152,19 +152,56 @@ namespace OpenStudioMeasuresViewer
             }
             else
             {
+                switch (e.Node.Level)
+                {
+                    case 1:
+                        {
+                            e.Node.Override.NodeAppearance.BackColor = Color.LightGray;
+                            e.Node.Override.NodeAppearance.ForeColor = Color.Black;
+                            e.Node.Override.NodeAppearance.BorderColor = Color.Gray;
+                            e.Node.Override.NodeAppearance.FontData.Bold = Infragistics.Win.DefaultableBoolean.True;
+                            e.Node.Override.BorderStyleNode = Infragistics.Win.UIElementBorderStyle.Solid;
+                        }
+                        break;
 
+                    case 2:
+                        {
+                            SimulationMeasure measure = e.Node.ListObject as SimulationMeasure;
+                            if (measure != null)
+                            {
+
+                                Color color = e.Node.Override.NodeAppearance.BackColor;
+                                if (measure.Type == SimulationMeasureType.ModelMeasure)
+                                    color = Color.FromArgb(200, 214, 230);
+
+                                if (measure.Type == SimulationMeasureType.EnergyPlusMeasure)
+                                    color = Color.FromArgb(202, 218, 169);
+
+                                if (measure.Type == SimulationMeasureType.ReportingMeasure)
+                                    color = Color.FromArgb(206, 149, 139);
+
+                                e.Node.Override.NodeAppearance.BackColor = color;
+                                // e.Node.Override.NodeAppearance.ForeColor = Color.White;
+                                e.Node.Override.NodeAppearance.BorderColor = Color.Black;
+                                e.Node.Override.BorderStyleNode = Infragistics.Win.UIElementBorderStyle.Solid;
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
         private void measuresTreeView_AfterDataNodesCollectionPopulated(object sender, Infragistics.Win.UltraWinTree.AfterDataNodesCollectionPopulatedEventArgs e)
         {
-            
+
 
         }
 
         private void measuresTreeView_ColumnSetGenerated(object sender, Infragistics.Win.UltraWinTree.ColumnSetGeneratedEventArgs e)
         {
-           
+
             foreach (var item in e.ColumnSet.Columns)
             {
                 if (item.Key != "Name" && !item.DataType.IsGenericType)
@@ -185,10 +222,10 @@ namespace OpenStudioMeasuresViewer
                 UltraDataRow configRow;
                 configRow = this.udsSimulationGroupList.Rows.Add();
                 configRow["Configuration"] = "Config-1";
-                UltraDataRow measureRow = configRow.GetChildRows("ZONE").Add();
-                measureRow["Configuration"] = "Measure-1";
-                UltraDataRow simRunRow = measureRow.GetChildRows("SIMRUN").Add();
-                simRunRow["Configuration"] = "SimRun-1";
+                //UltraDataRow measureRow = configRow.GetChildRows("ZONE").Add();
+                //measureRow["Configuration"] = "Measure-1";
+                //UltraDataRow simRunRow = measureRow.GetChildRows("SIMRUN").Add();
+                //simRunRow["Configuration"] = "SimRun-1";
 
                 this.ugSimulationgropus.DataSource = this.udsSimulationGroupList;
 
@@ -246,7 +283,16 @@ namespace OpenStudioMeasuresViewer
             if (parentGridRow != null && (parentGridRow.Band.Index == 0 || parentGridRow.Band.Index == 1) &&
                                    parentGridRow.Band.Key != "ZONE")
             {
+                if (measuresTreeView.SelectedNodes?.Count > 0)
+                {
+                    foreach (UltraTreeNode measureNode in measuresTreeView.SelectedNodes)
+                    {
+                        if (measureNode.Level == 3)
+                        {
 
+                        }
+                    }
+                }
             }
 
         }
