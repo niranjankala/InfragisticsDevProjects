@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="MeasuresViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +227,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rm-gray32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-arrow24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-arrow16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

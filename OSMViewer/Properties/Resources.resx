@@ -184,4 +184,16 @@
   <data name="rm-gray32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rm-gray32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="down_arrow16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-arrow16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="down_arrow24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down-arrow24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="up_arrow16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\up-arrow16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="up_arrow24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\up-arrow24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -127,15 +127,7 @@
     <value>387, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="appearance12.ImageBackground" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1wAADdcBQiibeAAAAGpJREFUOE/Fk0EOwCAIBH0mz+nPsRAwtMzJNvEwBzeze1GHqjZEJLkCP5OLYSlr
-        4CPkYvgqrxFyW2DccpJlP5OLYRaifHbgAbkYUtkgF0MqG+RiSGWDXAxL6fwtbA/88pQ/faY64mWjuzom
-        SFJfJypcFWAAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="appearance13.ImageBackground" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="appearance18.ImageBackground" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
         1wAADdcBQiibeAAAALNJREFUOE+tk8ENgzAQBKEIWqAFXnxSUTpIekIUwys/OoBvsmPF0mKZSNHxGHG+
@@ -146,5 +138,8 @@
   </data>
   <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>665, 17</value>
+  </metadata>
+  <metadata name="ultraTreePrintDocument2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>757, 17</value>
   </metadata>
 </root>
