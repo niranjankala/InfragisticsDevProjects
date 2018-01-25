@@ -258,12 +258,12 @@ namespace OpenStudioMeasuresViewer
                 UltraDataRow configRow;
                 configRow = this.udsSimulationGroupList.Rows.Add();
                 configRow["Configuration"] = "Config-1";
-                //UltraDataRow measureRow = configRow.GetChildRows("ZONE").Add();
-                //measureRow["Configuration"] = "Measure-1";
+                UltraDataRow measureRow = configRow.GetChildRows("ZONE").Add();
+                measureRow["Configuration"] = "Measure-1";                
                 //UltraDataRow simRunRow = measureRow.GetChildRows("SIMRUN").Add();
                 //simRunRow["Configuration"] = "SimRun-1";
 
-                this.ugSimulationgropus.DataSource = this.udsSimulationGroupList;
+                //this.ugSimulationgropus.DataSource = this.udsSimulationGroupList;
 
 
             }

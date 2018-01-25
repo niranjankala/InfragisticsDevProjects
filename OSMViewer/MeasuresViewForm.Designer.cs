@@ -199,7 +199,7 @@
             this.tbpMeasures.Controls.Add(this.pnlCommandButtons);
             this.tbpMeasures.Location = new System.Drawing.Point(1, 23);
             this.tbpMeasures.Name = "tbpMeasures";
-            this.tbpMeasures.Size = new System.Drawing.Size(826, 488);
+            this.tbpMeasures.Size = new System.Drawing.Size(746, 488);
             // 
             // tlpMeasures
             // 
@@ -216,7 +216,7 @@
             this.tlpMeasures.RowCount = 2;
             this.tlpMeasures.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlpMeasures.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMeasures.Size = new System.Drawing.Size(826, 442);
+            this.tlpMeasures.Size = new System.Drawing.Size(746, 442);
             this.tlpMeasures.TabIndex = 4;
             // 
             // measuresContainer
@@ -225,10 +225,10 @@
             this.measuresContainer.Controls.Add(this.measuresTreeView);
             this.measuresContainer.Controls.Add(this.pnlMeasuresCommand);
             this.measuresContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.measuresContainer.Location = new System.Drawing.Point(289, 40);
+            this.measuresContainer.Location = new System.Drawing.Point(261, 40);
             this.measuresContainer.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.measuresContainer.Name = "measuresContainer";
-            this.measuresContainer.Size = new System.Drawing.Size(534, 402);
+            this.measuresContainer.Size = new System.Drawing.Size(482, 402);
             this.measuresContainer.TabIndex = 4;
             // 
             // measuresTreeView
@@ -250,7 +250,7 @@
             _override1.ItemHeight = 32;
             _override1.ShowExpansionIndicator = Infragistics.Win.UltraWinTree.ShowExpansionIndicator.CheckOnDisplay;
             this.measuresTreeView.Override = _override1;
-            this.measuresTreeView.Size = new System.Drawing.Size(532, 355);
+            this.measuresTreeView.Size = new System.Drawing.Size(480, 355);
             this.measuresTreeView.TabIndex = 5;
             this.measuresTreeView.ViewStyle = Infragistics.Win.UltraWinTree.ViewStyle.OutlookExpress;
             this.measuresTreeView.AfterSelect += new Infragistics.Win.UltraWinTree.AfterNodeSelectEventHandler(this.measuresTreeView_AfterSelect);
@@ -265,7 +265,7 @@
             this.pnlMeasuresCommand.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlMeasuresCommand.Location = new System.Drawing.Point(0, 355);
             this.pnlMeasuresCommand.Name = "pnlMeasuresCommand";
-            this.pnlMeasuresCommand.Size = new System.Drawing.Size(532, 45);
+            this.pnlMeasuresCommand.Size = new System.Drawing.Size(480, 45);
             this.pnlMeasuresCommand.TabIndex = 6;
             // 
             // btnAddMeasure
@@ -285,9 +285,9 @@
             // 
             this.pnlMeasuresCompatibility.ClientArea.Controls.Add(this.tlpMeasureCompatibility);
             this.pnlMeasuresCompatibility.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMeasuresCompatibility.Location = new System.Drawing.Point(292, 3);
+            this.pnlMeasuresCompatibility.Location = new System.Drawing.Point(264, 3);
             this.pnlMeasuresCompatibility.Name = "pnlMeasuresCompatibility";
-            this.pnlMeasuresCompatibility.Size = new System.Drawing.Size(531, 34);
+            this.pnlMeasuresCompatibility.Size = new System.Drawing.Size(479, 34);
             this.pnlMeasuresCompatibility.TabIndex = 0;
             // 
             // tlpMeasureCompatibility
@@ -309,7 +309,7 @@
             this.tlpMeasureCompatibility.Name = "tlpMeasureCompatibility";
             this.tlpMeasureCompatibility.RowCount = 1;
             this.tlpMeasureCompatibility.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMeasureCompatibility.Size = new System.Drawing.Size(531, 34);
+            this.tlpMeasureCompatibility.Size = new System.Drawing.Size(479, 34);
             this.tlpMeasureCompatibility.TabIndex = 5;
             // 
             // lblMeasureCompatibility
@@ -331,7 +331,7 @@
             this.btnValidationResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidationResult.Location = new System.Drawing.Point(262, 3);
             this.btnValidationResult.Name = "btnValidationResult";
-            this.btnValidationResult.Size = new System.Drawing.Size(266, 28);
+            this.btnValidationResult.Size = new System.Drawing.Size(214, 28);
             this.btnValidationResult.TabIndex = 4;
             this.btnValidationResult.Text = "Validation is running ...";
             // 
@@ -385,7 +385,7 @@
             this.pnlMeasuresLocation.Location = new System.Drawing.Point(3, 0);
             this.pnlMeasuresLocation.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.pnlMeasuresLocation.Name = "pnlMeasuresLocation";
-            this.pnlMeasuresLocation.Size = new System.Drawing.Size(286, 40);
+            this.pnlMeasuresLocation.Size = new System.Drawing.Size(258, 40);
             this.pnlMeasuresLocation.TabIndex = 2;
             // 
             // rbtOnlineMeasures
@@ -427,7 +427,7 @@
             this.pnlMeasureDetails.Location = new System.Drawing.Point(3, 40);
             this.pnlMeasureDetails.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.pnlMeasureDetails.Name = "pnlMeasureDetails";
-            this.pnlMeasureDetails.Size = new System.Drawing.Size(286, 402);
+            this.pnlMeasureDetails.Size = new System.Drawing.Size(258, 402);
             this.pnlMeasureDetails.TabIndex = 3;
             // 
             // pnlMeasureAttributes
@@ -435,7 +435,7 @@
             this.pnlMeasureAttributes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMeasureAttributes.Location = new System.Drawing.Point(0, 20);
             this.pnlMeasureAttributes.Name = "pnlMeasureAttributes";
-            this.pnlMeasureAttributes.Size = new System.Drawing.Size(284, 380);
+            this.pnlMeasureAttributes.Size = new System.Drawing.Size(256, 380);
             this.pnlMeasureAttributes.TabIndex = 5;
             // 
             // lblBelowMeasureDetailLine
@@ -444,7 +444,7 @@
             this.lblBelowMeasureDetailLine.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblBelowMeasureDetailLine.Location = new System.Drawing.Point(0, 19);
             this.lblBelowMeasureDetailLine.Name = "lblBelowMeasureDetailLine";
-            this.lblBelowMeasureDetailLine.Size = new System.Drawing.Size(284, 1);
+            this.lblBelowMeasureDetailLine.Size = new System.Drawing.Size(256, 1);
             this.lblBelowMeasureDetailLine.TabIndex = 6;
             // 
             // lblMeasureDetails
@@ -455,7 +455,7 @@
             this.lblMeasureDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMeasureDetails.Location = new System.Drawing.Point(0, 0);
             this.lblMeasureDetails.Name = "lblMeasureDetails";
-            this.lblMeasureDetails.Size = new System.Drawing.Size(284, 19);
+            this.lblMeasureDetails.Size = new System.Drawing.Size(256, 19);
             this.lblMeasureDetails.TabIndex = 4;
             this.lblMeasureDetails.Text = "Measure details";
             // 
@@ -469,7 +469,7 @@
             this.pnlCommandButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlCommandButtons.Location = new System.Drawing.Point(0, 442);
             this.pnlCommandButtons.Name = "pnlCommandButtons";
-            this.pnlCommandButtons.Size = new System.Drawing.Size(826, 46);
+            this.pnlCommandButtons.Size = new System.Drawing.Size(746, 46);
             this.pnlCommandButtons.TabIndex = 3;
             // 
             // btnRunSimulation
@@ -486,7 +486,7 @@
             // 
             this.tbpDashBoard.Location = new System.Drawing.Point(-10000, -10000);
             this.tbpDashBoard.Name = "tbpDashBoard";
-            this.tbpDashBoard.Size = new System.Drawing.Size(826, 488);
+            this.tbpDashBoard.Size = new System.Drawing.Size(746, 488);
             // 
             // pnlSimulationGridContainer
             // 
@@ -501,7 +501,7 @@
             this.pnlSimulationGridContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSimulationGridContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlSimulationGridContainer.Name = "pnlSimulationGridContainer";
-            this.pnlSimulationGridContainer.Size = new System.Drawing.Size(417, 514);
+            this.pnlSimulationGridContainer.Size = new System.Drawing.Size(497, 514);
             this.pnlSimulationGridContainer.TabIndex = 5;
             // 
             // ucmbOutputFormatTemplates
@@ -737,19 +737,19 @@
             ultraGridBand3.ColHeadersVisible = false;
             ultraGridColumn5.Header.Editor = null;
             ultraGridColumn5.Header.VisiblePosition = 0;
-            ultraGridColumn5.Width = 59;
+            ultraGridColumn5.Width = 74;
             ultraGridColumn6.Header.Editor = null;
             ultraGridColumn6.Header.VisiblePosition = 1;
-            ultraGridColumn6.Width = 57;
+            ultraGridColumn6.Width = 73;
             ultraGridColumn7.Header.Editor = null;
             ultraGridColumn7.Header.VisiblePosition = 2;
-            ultraGridColumn7.Width = 59;
+            ultraGridColumn7.Width = 72;
             ultraGridColumn8.Header.Editor = null;
             ultraGridColumn8.Header.VisiblePosition = 3;
-            ultraGridColumn8.Width = 88;
+            ultraGridColumn8.Width = 107;
             ultraGridColumn9.Header.Editor = null;
             ultraGridColumn9.Header.VisiblePosition = 4;
-            ultraGridColumn9.Width = 76;
+            ultraGridColumn9.Width = 93;
             ultraGridBand3.Columns.AddRange(new object[] {
             ultraGridColumn5,
             ultraGridColumn6,
@@ -813,7 +813,7 @@
             this.ugSimulationgropus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ugSimulationgropus.Location = new System.Drawing.Point(0, 0);
             this.ugSimulationgropus.Name = "ugSimulationgropus";
-            this.ugSimulationgropus.Size = new System.Drawing.Size(417, 514);
+            this.ugSimulationgropus.Size = new System.Drawing.Size(497, 514);
             this.ugSimulationgropus.TabIndex = 12;
             this.ugSimulationgropus.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ugSimulationgropus_InitializeLayout);
             this.ugSimulationgropus.ClickCellButton += new Infragistics.Win.UltraWinGrid.CellEventHandler(this.ugSimulationgropus_ClickCellButton);
@@ -856,7 +856,7 @@
             this.pnlManageMeasures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlManageMeasures.Location = new System.Drawing.Point(0, 0);
             this.pnlManageMeasures.Name = "pnlManageMeasures";
-            this.pnlManageMeasures.Size = new System.Drawing.Size(830, 514);
+            this.pnlManageMeasures.Size = new System.Drawing.Size(750, 514);
             this.pnlManageMeasures.TabIndex = 4;
             // 
             // simulationTabControl
@@ -868,7 +868,7 @@
             this.simulationTabControl.Location = new System.Drawing.Point(0, 0);
             this.simulationTabControl.Name = "simulationTabControl";
             this.simulationTabControl.SharedControlsPage = this.ultraTabSharedControlsPage1;
-            this.simulationTabControl.Size = new System.Drawing.Size(830, 514);
+            this.simulationTabControl.Size = new System.Drawing.Size(750, 514);
             this.simulationTabControl.TabIndex = 11;
             ultraTab1.TabPage = this.tbpMeasures;
             ultraTab1.Text = "Measures";
@@ -882,7 +882,7 @@
             // 
             this.ultraTabSharedControlsPage1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabSharedControlsPage1.Name = "ultraTabSharedControlsPage1";
-            this.ultraTabSharedControlsPage1.Size = new System.Drawing.Size(826, 488);
+            this.ultraTabSharedControlsPage1.Size = new System.Drawing.Size(746, 488);
             // 
             // splitContainer1
             // 
@@ -898,7 +898,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.pnlManageMeasures);
             this.splitContainer1.Size = new System.Drawing.Size(1251, 514);
-            this.splitContainer1.SplitterDistance = 417;
+            this.splitContainer1.SplitterDistance = 497;
             this.splitContainer1.TabIndex = 6;
             // 
             // MeasuresViewForm
