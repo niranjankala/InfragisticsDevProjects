@@ -1,0 +1,65 @@
+﻿/** {
+    font-size: 12px !important;
+}*/
+
+.numericAlignment {
+    text-align: right;
+}
+
+.filtericonequals {
+    background: url(/IgniteUI/css/structure/images/igGrid/filter-icons-333333.png) no-repeat -208px 0;
+    border: 0px solid rgb(255, 255, 255);
+    border-image: none;
+    float: right;
+    background-color: rgb(255, 255, 255);
+}
+
+.filtericon {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.referal-icons {
+    float: right;
+    width: 16px;
+}
+
+    .referal-icons span + span {
+        margin-top: .5em;
+    }
+
+.label-th {
+    padding: 5px 5px 5px;
+    border: 1px solid rgb(51, 51, 51);
+    border-image: none;
+    width: 103px;
+    height: 15px;
+    font-size: 14px !important;
+    float: left;
+    background-color: rgb(191, 191, 191);
+}
+
+.input-td {
+    border: 1px solid rgb(51, 51, 51);
+    border-image: none;
+    height: 25px;
+    float: left;
+    width: 293px;
+}
+
+.input-div {
+    height: 25px;
+    width: 291px !important;
+    overflow: hidden;
+}
+
+.input-button {
+    border-radius: 5px;
+    width: 65px;
+    height: 25px;
+}
+
+.ui-igcombo-list-overflow {
+    max-height: 275px !important;
+}

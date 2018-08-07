@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4DAAEF65-D469-444F-A4D7-10128444234B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>OpenStudioMeasuresViewer</RootNamespace>
-    <AssemblyName>OpenStudioMeasuresViewer</AssemblyName>
+    <RootNamespace>OSMViewer</RootNamespace>
+    <AssemblyName>OSMViewer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,67 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Infragistics4.Shared.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Shared.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.Misc.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.Misc.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinChart.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinChart.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinDataSource.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinDataSource.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinDock.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinDock.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinEditors.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinEditors.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinGauge.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinGauge.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinGrid.DocumentExport.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinGrid.ExcelExport.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinGrid.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinGrid.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinMaskedEdit.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinTabControl.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinTabControl.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinToolbars.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinToolbars.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.UltraWinTree.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.UltraWinTree.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Infragistics4.Win.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ThirdPartyLibraries\Infragistics\17.2\Infragistics4.Win.v17.2.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Infragistics4.Shared.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v16.2, Version=16.2.20162.2182, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -119,16 +62,9 @@
     <Compile Include="MeasuresViewForm.Designer.cs">
       <DependentUpon>MeasuresViewForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="measure_v3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terms.cs" />
-    <Compile Include="TestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestForm.Designer.cs">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="XMLHelper.cs" />
     <EmbeddedResource Include="MeasuresViewForm.resx">
       <DependentUpon>MeasuresViewForm.cs</DependentUpon>
@@ -142,11 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TestForm.resx">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,72 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete16x16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\em24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\em32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\em64-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\em64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\em-gray24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\em-gray32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mm24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mm32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mm64-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mm64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mm-gray24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mm-gray32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\move16x16.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\move24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rm24x24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rm32x32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rm64-gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rm64x64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rm-gray24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\rm-gray32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

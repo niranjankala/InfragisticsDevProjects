@@ -1,0 +1,107 @@
+﻿@using Infragistics.Web.Mvc;
+@model InfraGridAndDataTableSample.Models.DAQlmLicenseInfo
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!-- Ignite UI Required Combined CSS Files -->
+<link href="@Url.Content("~/IgniteUI/css/themes/infragistics/infragistics.theme.css")" rel="stylesheet" />
+<link href="@Url.Content("~/IgniteUI/css/structure/infragistics.css")" rel="stylesheet" />
+<link href="@Url.Content("~/IgniteUI/css/custom-style.css")" rel="stylesheet" />
+
+<script src="@Url.Content("~/IgniteUI/js/jquery/modernizr-2.6.2.js")"></script>
+<script src="@Url.Content("~/IgniteUI/js/jquery/jquery-1.10.2.min.js")"></script>
+<script src="@Url.Content("~/IgniteUI/js/jquery/jquery-ui.min.js")"></script>
+
+<!-- Ignite UI Required Combined JavaScript Files -->
+<script src="@Url.Content("~/IgniteUI/js/infragistics.core.js")"></script>
+<script src="@Url.Content("~/IgniteUI/js/infragistics.lob.js")"></script>
+
+<!-- Used to add modal loading indicator for igGrid -->
+<script src="@Url.Content("~/IgniteUI/js/grid-modal-loading-inicator.js")"></script>
+
+<!-- Used to add validation for igGrid -->
+<script src="@Url.Content("~/Helper/clientvalidation.js")"></script>
+
+
+
+<div>
+    @(Html.Infragistics().Grid<InfraGridAndDataTableSample.Models.DAQlmLicenseInfo>()
+        .ID("Grid")
+        .PrimaryKey("ActivationKey")
+        .Height("500px")
+                .Columns(column =>
+                {
+                    column.For(x => x.CreationDate).HeaderText("Installed On").Width("25%").Hidden(false);
+                    column.For(x => x.ActivationKey).HeaderText("ActivationKey").Width("25%").Hidden(false).HeaderCssClass("GridHeader");
+                    column.For(x => x.State).HeaderText("State").Width("35%").Hidden(false).HeaderCssClass("GridHeader");
+                    //column.For(x => x.LicenseType).HeaderText("LicenseType").Width("25%").Hidden(false)
+                    //.Template("<a class='a_HyperLink' id='${WFRequisitionNo}' data-value='${ScreenCode}' data-name='${ApprovalStatus}' data-value1='${RequestedBy}' data-value2='${RequestedOn}' data-value3='${RequestContent}' onclick='OpenWFRequisitionNoPopup(this)' href='#'>${WFRequisitionNo}</a>").HeaderCssClass("GridHeader");
+                    column.For(x => x.LicenseType).HeaderText("LicenseType").Width("25%").Hidden(false).HeaderCssClass("GridHeader");
+                    column.For(x => x.OrderDate).HeaderText("Purchase Date").Width("30%").Hidden(false).HeaderCssClass("GridHeader");
+                    column.For(x => x.SubscriptionExpiryDate).HeaderText("Expires").Width("30%").Hidden(false).HeaderCssClass("GridHeader");
+                    column.For(x => x.ProductName).HeaderText("Notes").Width("30%").Hidden(false).HeaderCssClass("GridHeader");
+                    column.For(x => x.ReceiptID).HeaderText("Release/Renew License").Width("30%").Hidden(false).HeaderCssClass("GridHeader").Template("<input type='button' onclick='renew(${ActivationKey})' value='Renew'/>");
+                })
+        .Width("100%")
+        .EnableUTCDates(false)
+        .Features(features =>
+        {
+            features.RowSelectors().EnableRowNumbering(true);
+            features.Paging().PageSize(10).Type(OpType.Local);
+            features.Filtering().Type(OpType.Local).Mode(FilterMode.Simple).ColumnSettings(settings =>
+            {
+                settings.ColumnSetting().ColumnKey("CreationDate").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("ActivationKey").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("State").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("LicenseType").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("OrderDate").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("SubscriptionExpiryDate").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("ProductName").AllowFiltering(true).FilterCondition("startsWith");
+                settings.ColumnSetting().ColumnKey("ReceiptID").AllowFiltering(true).FilterCondition("startsWith");
+            });
+            features.Selection().Mode(SelectionMode.Row).MultipleSelection(true).Persist(false);
+            features.Sorting().Mode(SortingMode.Single).Type(OpType.Local);
+            features.Updating().EditMode(GridEditMode.Row).EnableAddRow(true).EnableDeleteRow(true).ShowDoneCancelButtons(true)
+                  .ColumnSettings(cs =>
+                  {
+                      cs.ColumnSetting().ColumnKey("CreationDate").ReadOnly(true);
+
+                  });
+        })
+        .TabIndex(-1)
+            .AutoGenerateColumns(false)
+            .AutoGenerateLayouts(false)
+            .AutoCommit(false)
+            .RenderCheckboxes(true)
+           // .DataSourceUrl(Url.Action("GetData","Home"))
+            // .UpdateUrl(Url.Action("SaveData", "Home"))
+            .Render())
+            
+</div>
+<script type="text/javascript">  
+
+   
+    var grid, gridloadingIndicator;
+    $(function () {
+
+        grid = $("#Grid");
+
+        gridloadingIndicator = new GridModalLoadingIndicator(grid);
+
+        grid.on("iggriddatabinding", function (e, args) {
+            gridloadingIndicator.show();
+        });
+
+        grid.on("iggriddatabound", function (e, args) {
+            gridloadingIndicator.hide();
+        });
+
+    });
+
+    function renew(activationKey)
+    {
+        alert(activationKey);
+    }
+   
+    </script>
