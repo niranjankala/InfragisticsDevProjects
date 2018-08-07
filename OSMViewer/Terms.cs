@@ -47,12 +47,13 @@ namespace OpenStudioMeasuresViewer
     }
 
 
+
     // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
     /// <remarks/>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]    
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
     public partial class measure
     {
 
@@ -76,11 +77,13 @@ namespace OpenStudioMeasuresViewer
 
         private string modeler_descriptionField;
 
+        private measureArgument[] argumentsField;
+
         private measureTags tagsField;
 
         private measureAttribute[] attributesField;
 
-        private measureFile[] filesField;        
+        private measureFile[] filesField;
 
         /// <remarks/>
         public decimal schema_version
@@ -213,6 +216,20 @@ namespace OpenStudioMeasuresViewer
         }
 
         /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("argument", IsNullable = false)]
+        public measureArgument[] arguments
+        {
+            get
+            {
+                return this.argumentsField;
+            }
+            set
+            {
+                this.argumentsField = value;
+            }
+        }
+
+        /// <remarks/>
         public measureTags tags
         {
             get
@@ -252,10 +269,188 @@ namespace OpenStudioMeasuresViewer
                 this.filesField = value;
             }
         }
+    }
 
-        [XmlIgnore]
-        public SimulationMeasureType MeasureType { get; set; }
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class measureArgument
+    {
 
+        private string nameField;
+
+        private string display_nameField;
+
+        private string unitsField;
+
+        private string descriptionField;
+
+        private string typeField;
+
+        private bool requiredField;
+
+        private bool model_dependentField;
+
+        private string default_valueField;
+
+        private measureArgumentChoice[] choicesField;
+
+        /// <remarks/>
+        public string name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string display_name
+        {
+            get
+            {
+                return this.display_nameField;
+            }
+            set
+            {
+                this.display_nameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string units
+        {
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string description
+        {
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string type
+        {
+            get
+            {
+                return this.typeField;
+            }
+            set
+            {
+                this.typeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool required
+        {
+            get
+            {
+                return this.requiredField;
+            }
+            set
+            {
+                this.requiredField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool model_dependent
+        {
+            get
+            {
+                return this.model_dependentField;
+            }
+            set
+            {
+                this.model_dependentField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string default_value
+        {
+            get
+            {
+                return this.default_valueField;
+            }
+            set
+            {
+                this.default_valueField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("choice", IsNullable = false)]
+        public measureArgumentChoice[] choices
+        {
+            get
+            {
+                return this.choicesField;
+            }
+            set
+            {
+                this.choicesField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class measureArgumentChoice
+    {
+
+        private string valueField;
+
+        private string display_nameField;
+
+        /// <remarks/>
+        public string value
+        {
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string display_name
+        {
+            get
+            {
+                return this.display_nameField;
+            }
+            set
+            {
+                this.display_nameField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -347,6 +542,10 @@ namespace OpenStudioMeasuresViewer
 
         private string filetypeField;
 
+        private string usage_typeField;
+
+        private string checksumField;
+
         /// <remarks/>
         public measureFileVersion version
         {
@@ -385,6 +584,32 @@ namespace OpenStudioMeasuresViewer
                 this.filetypeField = value;
             }
         }
+
+        /// <remarks/>
+        public string usage_type
+        {
+            get
+            {
+                return this.usage_typeField;
+            }
+            set
+            {
+                this.usage_typeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string checksum
+        {
+            get
+            {
+                return this.checksumField;
+            }
+            set
+            {
+                this.checksumField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -397,6 +622,8 @@ namespace OpenStudioMeasuresViewer
         private string software_programField;
 
         private string identifierField;
+
+        private string min_compatibleField;
 
         /// <remarks/>
         public string software_program
@@ -423,7 +650,22 @@ namespace OpenStudioMeasuresViewer
                 this.identifierField = value;
             }
         }
+
+        /// <remarks/>
+        public string min_compatible
+        {
+            get
+            {
+                return this.min_compatibleField;
+            }
+            set
+            {
+                this.min_compatibleField = value;
+            }
+        }
     }
+
+
 
 
 

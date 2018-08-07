@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationManager.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="MeasuresViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +93,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em64-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em-gray24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\em-gray32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm64-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm-gray24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mm-gray32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm64-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm-gray24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rm-gray32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-arrow24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-arrow24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-arrow16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

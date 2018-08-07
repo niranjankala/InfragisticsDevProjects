@@ -83,6 +83,26 @@ namespace OpenStudioMeasuresViewer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap down_arrow16x16 {
+            get {
+                object obj = ResourceManager.GetObject("down_arrow16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap down_arrow24x24 {
+            get {
+                object obj = ResourceManager.GetObject("down_arrow24x24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap em_gray24 {
             get {
                 object obj = ResourceManager.GetObject("em-gray24", resourceCulture);
@@ -276,6 +296,26 @@ namespace OpenStudioMeasuresViewer.Properties {
         internal static System.Drawing.Bitmap rm64x64 {
             get {
                 object obj = ResourceManager.GetObject("rm64x64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up_arrow16x16 {
+            get {
+                object obj = ResourceManager.GetObject("up_arrow16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up_arrow24x24 {
+            get {
+                object obj = ResourceManager.GetObject("up_arrow24x24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
