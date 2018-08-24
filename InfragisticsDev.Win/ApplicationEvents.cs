@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InfragisticsDev.Win
 {
-    public partial class Form1 : Form
+    public partial class ApplicationEvents : Form
     {
-        public Form1()
+        public ApplicationEvents()
         {
             InitializeComponent();
         }

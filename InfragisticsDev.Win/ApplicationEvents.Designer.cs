@@ -1,6 +1,6 @@
 ﻿namespace InfragisticsDev.Win
 {
-    partial class Form1
+    partial class ApplicationEvents
     {
         /// <summary>
         /// Required designer variable.
