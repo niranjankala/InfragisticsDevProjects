@@ -52,8 +52,13 @@
     <Compile Include="ApplicationEvents.Designer.cs">
       <DependentUpon>ApplicationEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataEntities\TemplateProperty.cs" />
+    <Compile Include="Enums\TemplateStructureEnums.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ApplicationEvents.resx">
+      <DependentUpon>ApplicationEvents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,7 +82,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="LoadIS\" />
+    <ProjectReference Include="..\InfragisticsDev.Common\InfragisticsDev.Common.csproj">
+      <Project>{739934a8-ce6e-4379-98d0-ea42020eb45a}</Project>
+      <Name>InfragisticsDev.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LoadIS\ZoneLoadProps.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

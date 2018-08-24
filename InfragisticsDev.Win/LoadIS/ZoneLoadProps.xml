@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<TemplateProperty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PropertyName />
+  <DisplayValue xsi:type="xsd:string" />
+  <DependencyType>None</DependencyType>
+  <SimModelClass />
+  <Value xsi:type="xsd:string" />
+  <HasModifiedValue>false</HasModifiedValue>
+  <Unit />
+  <PropertyKey />
+  <Category />
+  <Required />
+  <Save />
+  <IsPrimary />
+  <ValidationError />
+  <ParentValue />
+  <ParentKey>-1</ParentKey>
+  <ParentID />
+  <DefaultValue xsi:type="xsd:string" />
+  <DisplayOutPutRequestClass />
+  <Type />
+  <SubType />
+  <IsHiddenSimModelProperty>true</IsHiddenSimModelProperty>
+  <IsHiddenEPlusProperty>false</IsHiddenEPlusProperty>
+  <ShowInline>false</ShowInline>
+  <IsSimple>false</IsSimple>
+  <OutPutRequestPropertyName />
+  <Key>0</Key>
+  <DataType />
+  <ListType xsi:type="xsd:boolean">false</ListType>
+  <Field />
+  <IDDObject />
+  <IsT24PropertyAgainSave>false</IsT24PropertyAgainSave>
+  <T24ToolTipMessage />
+  <OriginalUnit />
+  <IDDSlashCode />
+  <IterationsCount>0</IterationsCount>
+  <Iterations>0</Iterations>
+  <ConvertedUnit />
+  <IsIpUnit>false</IsIpUnit>
+  <PropertyBelong>None</PropertyBelong>
+  <ComplianceUse />
+  <IsEditable>true</IsEditable>
+  <IsPropertyExpend>false</IsPropertyExpend>
+  <ScheduleType />
+  <Properties />
+</TemplateProperty>
