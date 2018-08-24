@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InfragistcsDev.ASPNET.MVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,19 +27,19 @@ namespace InfragistcsDev.ASPNET.MVC.Controllers
 
             return View();
         }
-public ActionResult GetData()
+        public ActionResult GetData()
         {
-            IList<DAQlmLicenseInfo> records = new List<DAQlmLicenseInfo>();            
-            
-                var jsonDataObj = Json(new
-                {
-                    recordCountKey = 0,
-                    responseDataKey = "data",
-                    Error = true,
-                    msg = ""
-                });
-                return Json(jsonDataObj, JsonRequestBehavior.AllowGet);
-                      
+            IList<DAQlmLicenseInfo> records = new List<DAQlmLicenseInfo>();
+
+            var jsonDataObj = Json(new
+            {
+                recordCountKey = 0,
+                responseDataKey = "data",
+                Error = true,
+                msg = ""
+            });
+            return Json(jsonDataObj, JsonRequestBehavior.AllowGet);
+
         }
     }
 }
