@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LoadIS\ZoneLoadProps.xml" />
+    <Content Include="LoadIS\Zone_Loads_Screens.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

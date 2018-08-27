@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +24,45 @@ namespace InfragisticsDev.Win
         {
             try
             {
-                XMLHelper.ToXML(@"D:\Repositories\GitHub\InfragisticsDevProjects\InfragisticsDev.Win\LoadIS\ZoneLoadProps.xml", new TemplateProperty()
-                { }
-                    );
+                string xmlPath = @"D:\Repositories\GitHub\InfragisticsDevProjects\InfragisticsDev.Win\LoadIS\ZoneLoadProps.xml";
+                //XMLHelper.ToXML(xmlPath, CreateXMLStructure());
+                if (File.Exists(xmlPath))
+                {
+                    textBox1.Text = File.ReadAllText(xmlPath);
+                }
             }
             catch (Exception ex)
-            {                
+            {
             }
+        }
+
+        private TemplateProperty CreateXMLStructure()
+        {
+            TemplateProperty template = new TemplateProperty()
+            {
+                SimModelClass = "SimTemplateOccupancyDriven",
+                Type = "Default",
+                SubType = "Default"
+            };
+
+            TemplateProperty zoneLoadsProp = new TemplateProperty()
+            {
+                PropertyName = "Loads",
+                Category = "Loads",
+                SimModelClass = "SimInternalLoad",
+                Type = "Any",
+                SubType = "Any",
+                InstanceSpeciferPropName = "Loads",
+                Properties = new List<ComponentProperty>()
+                {
+                    new TemplateProperty()
+                    {
+                    }
+                }
+            };
+
+            return template;
+
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace InfragisticsDev.Win.DataEntities
 {
@@ -19,6 +20,7 @@ namespace InfragisticsDev.Win.DataEntities
         private string simModelClass = string.Empty;
 
         [DisplayName("Property")]
+        [XmlAttribute]
         public string PropertyName
         {
             get { return propertyName; }
@@ -59,6 +61,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public string SimModelClass
         {
             get { return simModelClass; }
@@ -98,6 +101,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public string Unit
         {
             get { return unit; }
@@ -245,7 +249,7 @@ namespace InfragisticsDev.Win.DataEntities
                 }
             }
         }
-
+        [XmlAttribute]
         public string Category
         {
             get { return category; }
@@ -258,7 +262,7 @@ namespace InfragisticsDev.Win.DataEntities
                 }
             }
         }
-
+        [XmlAttribute]
         public string Required
         {
             get { return required; }
@@ -286,6 +290,7 @@ namespace InfragisticsDev.Win.DataEntities
         }
 
         [Browsable(false)]
+        [XmlAttribute]
         public string IsPrimary
         {
             get { return isPrimary; }
@@ -312,6 +317,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public string ParentValue
         {
             get { return parentValue; }
@@ -339,6 +345,7 @@ namespace InfragisticsDev.Win.DataEntities
             set { simModelT24PropertyName = value; }
         }
 
+        [XmlAttribute]
         public int ParentKey
         {
             get { return parentKey; }
@@ -352,6 +359,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public string ParentID
         {
             get { return parentID; }
@@ -365,6 +373,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public object DefaultValue
         {
             get { return defaultValue; }
@@ -393,7 +402,7 @@ namespace InfragisticsDev.Win.DataEntities
                 }
             }
         }
-
+        [XmlAttribute]
         public string Type
         {
             get { return type; }
@@ -406,7 +415,7 @@ namespace InfragisticsDev.Win.DataEntities
                 }
             }
         }
-
+        [XmlAttribute]
         public string SubType
         {
             get { return subType; }
@@ -464,7 +473,7 @@ namespace InfragisticsDev.Win.DataEntities
 
 
 
-
+        [XmlIgnore]
         public string OutPutRequestPropertyName
         {
             get { return outputRequestPropertyName; }
@@ -478,6 +487,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public int Key
         {
             get { return key; }
@@ -491,6 +501,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public string DataType
         {
             get { return dataType; }
@@ -505,6 +516,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public object ListType
         {
             get { return listType; }
@@ -552,6 +564,7 @@ namespace InfragisticsDev.Win.DataEntities
         }
 
 
+        [XmlAttribute]
         public string OriginalUnit
         {
             get { return originalUnit; }
@@ -581,6 +594,7 @@ namespace InfragisticsDev.Win.DataEntities
         /// <summary>
         /// This property will use to count SubChildProperty Count.
         /// </summary>
+        [XmlAttribute]
         public int IterationsCount
         {
             get { return iterationsCount; }
@@ -594,6 +608,7 @@ namespace InfragisticsDev.Win.DataEntities
             }
         }
 
+        [XmlAttribute]
         public int Iterations
         {
             get { return iterations; }
@@ -621,6 +636,7 @@ namespace InfragisticsDev.Win.DataEntities
         }
 
         [Browsable(false)]
+        [XmlAttribute]
         public bool IsIpUnit
         {
             get { return isIpUnit; }
@@ -644,7 +660,7 @@ namespace InfragisticsDev.Win.DataEntities
             get { return complianceUse; }
             set { complianceUse = value; }
         }
-
+        [XmlAttribute]
         public bool IsEditable
         {
             get { return isEditable; }
@@ -688,5 +704,9 @@ namespace InfragisticsDev.Win.DataEntities
 
     public class TemplateProperty : ComponentProperty
     {
+        [XmlAttribute]
+        public bool InstanceSpeciferProperty { get; set; }
+        [XmlAttribute]
+        public string InstanceSpeciferPropName { get; set; }
     }
 }

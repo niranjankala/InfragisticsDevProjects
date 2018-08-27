@@ -1,47 +1,49 @@
 <?xml version="1.0"?>
-<TemplateProperty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <PropertyName />
-  <DisplayValue xsi:type="xsd:string" />
-  <DependencyType>None</DependencyType>
-  <SimModelClass />
-  <Value xsi:type="xsd:string" />
-  <HasModifiedValue>false</HasModifiedValue>
-  <Unit />
-  <PropertyKey />
-  <Category />
-  <Required />
-  <Save />
-  <IsPrimary />
-  <ValidationError />
-  <ParentValue />
-  <ParentKey>-1</ParentKey>
-  <ParentID />
-  <DefaultValue xsi:type="xsd:string" />
-  <DisplayOutPutRequestClass />
-  <Type />
-  <SubType />
-  <IsHiddenSimModelProperty>true</IsHiddenSimModelProperty>
-  <IsHiddenEPlusProperty>false</IsHiddenEPlusProperty>
-  <ShowInline>false</ShowInline>
-  <IsSimple>false</IsSimple>
-  <OutPutRequestPropertyName />
-  <Key>0</Key>
-  <DataType />
-  <ListType xsi:type="xsd:boolean">false</ListType>
-  <Field />
-  <IDDObject />
-  <IsT24PropertyAgainSave>false</IsT24PropertyAgainSave>
-  <T24ToolTipMessage />
-  <OriginalUnit />
-  <IDDSlashCode />
-  <IterationsCount>0</IterationsCount>
-  <Iterations>0</Iterations>
-  <ConvertedUnit />
-  <IsIpUnit>false</IsIpUnit>
-  <PropertyBelong>None</PropertyBelong>
-  <ComplianceUse />
-  <IsEditable>true</IsEditable>
-  <IsPropertyExpend>false</IsPropertyExpend>
-  <ScheduleType />
-  <Properties />
-</TemplateProperty>
+   <Template Key="TBT_OCCUPANCY_DRIVEN_TEMPLATE" Name="Daylighting" Group="Data Templates" SimClass="SimTemplateOccupancyDriven" Type="Default" SubType="Default">
+    <Objects>
+      <Object SimClass="SimInternalLoad" Type="Any" SubType="Any" IsPrimary="1" ObjectSpeciferPropKey="1">
+        <Properties>
+          <Property Key="1" Category="Loads" Longname="Loads" Attribute="" Default="<Select>" ParentKey="" ParentValue="" ReferenceListParentID="" Units="" Required="Yes" ListCount="" InstanceSpeciferProperty="true" DefaultInstances="People,Lights,Electric Outlets"/>
+          <Property Key="2" Category="Loads" Longname="Instance" Attribute="" Default="" ParentKey="" ParentValue="" ReferenceListParentID="" Units="" Required="Yes" ListCount="" />
+          <Property Key="3" Category="Loads" Longname="Schedule" Attribute="SIM:TemplateFractionCntrlSensor1" Default="0.5" ParentKey="2" ParentValue="2" ReferenceListParentID="" Units="" Required="No" ListCount="" />
+          <Property Key="4" Category="Loads" Longname="Value Type" Attribute="SIM:TemplateIlluminanceSetpoint1" Default="500" ParentKey="" ParentValue="" ReferenceListParentID="" Units="lux" Required="No" ListCount="" />
+          <Property Key="5" Category="Loads" Longname="Value" Attribute="SIM:Sensor1_LocAlongWindows" Default="MidPoint" ParentKey="" ParentValue="" ReferenceListParentID="" Units="" Required="No" ListCount="" />
+          <Property Key="6" Category="Loads" Longname="Activity Schedule" Attribute="SIM:Sensor1_LocWindowsOffset" Default="2500" ParentKey="" ParentValue="" ReferenceListParentID="" Units="" Required="" ListCount="" />
+          <Property Key="7" Category="Loads" Longname="Max Value" Attribute="" Default="0" ParentKey="" ParentValue="" ReferenceListParentID="" Units="" Required="" ListCount="" />
+          </Properties>
+		<Dependencies>		
+		<Dependency Key="1" DependencyType="Enum" Source="People,Lights,Electric Outlets,Electric Process Equipment,Electric Elevators,Electric Escalators,Electric ITE,Gas Equipment,Gas Process Equipment,Hot Water Equip,Steam Equip,Other Equip" ParnetPropertyReferences=""/>
+		<Dependency Key="2" DependencyType="Library" SimClass="" Type="" SubType="" LibrariesRefPropKey="1"/>
+		<Dependency Key="5" DependencyType="Enum" Source="" EnumSourcePropKey=" />
+		<Dependency Key="10" DependencyType="Enum" Source="MidPoint" />
+		</Dependencies>
+		<Assignments>
+		<Assignment Key="1" Value="People" References="SimInternalLoad/People/Default" Attribute="TemplatePeopleLoads" ChildKey="2"/>
+		<Assignment Key="1" Value="Lights" References="SimInternalLoad/People/Default" Attribute="TemplateLightingLoads" ChildKey="2"/>
+		<Assignment Key="1" Value="Electric Outlets" References="SimInternalLoad/People/Default" Attribute="TemplateElectricalEquipment" ChildKey="2"/>
+		<Assignment Key="1" Value="Electric Process Equipment" References="SimInternalLoad/People/Default" Attribute="TemplateElecEqmt_Process" ChildKey="2"/>
+		<Assignment Key="1" Value="Electric Elevators" References="SimInternalLoad/People/Default" Attribute="TemplateElecEqmt_Elevators" ChildKey="2"/>
+		<Assignment Key="1" Value="Electric Escalators" References="SimInternalLoad/People/Default" Attribute="TemplateElecEqmt_Escalators" ChildKey="2"/>
+		<Assignment Key="1" Value="Electric ITE" References="SimInternalLoad/People/Default" Attribute="TemplateElecEqmt_ITE" ChildKey="2"/>
+		<Assignment Key="1" Value="Gas Equipment" References="SimInternalLoad/People/Default" Attribute="TemplateGasEquipment" ChildKey="2"/>
+		<Assignment Key="1" Value="Gas Process Equipment" References="SimInternalLoad/People/Default" Attribute="TemplateGasEqmt_Process" ChildKey="2"/>
+		<Assignment Key="1" Value="Hot Water Equip" References="SimInternalLoad/People/Default" Attribute="TemplateHotWaterEquipment" ChildKey="2"/>
+		<Assignment Key="1" Value="Steam Equip" References="SimInternalLoad/People/Default" Attribute="TemplateSteamEquipment" ChildKey="2"/>
+		<Assignment Key="1" Value="Other Equip" References="SimInternalLoad/People/Default" Attribute="TemplateOtherEquipment " ChildKey="2"/>		
+		</Assignments>		
+      </Object>
+    </Objects>    
+  </Template>  
+
+
+
+
+
+
+
+
+
+
+
+
+
