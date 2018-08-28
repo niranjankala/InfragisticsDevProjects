@@ -64,5 +64,15 @@ namespace InfragisticsDev.Win
             return template;
 
         }
+
+        private void btnOpenTemplatesView_Click(object sender, EventArgs e)
+        {
+            using (LoadIS.TemplatesForm templatesForm = new LoadIS.TemplatesForm())
+            {
+                templatesForm.ShowDialog(this);
+
+            }
+           
+        }
     }
 }
