@@ -136,3 +136,4 @@
 /InfragisticsDev.Win/obj/Debug
 /InfragisticsDev.Common/obj/Debug
 /InfragisticsDev.Common/bin/Debug
+*.user

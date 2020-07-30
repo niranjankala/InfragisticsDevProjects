@@ -37,6 +37,7 @@
     <Reference Include="Infragistics4.Win.Misc.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.UltraWinEditors.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.UltraWinGrid.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.v17.2, Version=17.2.20172.2006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -62,7 +63,39 @@
       <DependentUpon>ApplicationEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="DataEntities\TemplateProperty.cs" />
+    <Compile Include="Data\GroupLayoutDataSet.cs">
+      <DependentUpon>GroupLayoutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GroupLayoutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupLayoutDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Enums\TemplateStructureEnums.cs" />
+    <Compile Include="GridControl\GroupsLayout\Example1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridControl\GroupsLayout\Example1.Designer.cs">
+      <DependentUpon>Example1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridControl\GroupsLayout\Example2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridControl\GroupsLayout\Example2.Designer.cs">
+      <DependentUpon>Example2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridControl\GroupsLayout\Example3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridControl\GroupsLayout\Example3.Designer.cs">
+      <DependentUpon>Example3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadIS\LoadsViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadIS\LoadsViewer.Designer.cs">
+      <DependentUpon>LoadsViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadIS\TemplatesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,9 +107,22 @@
     <EmbeddedResource Include="ApplicationEvents.resx">
       <DependentUpon>ApplicationEvents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GridControl\GroupsLayout\Example1.resx">
+      <DependentUpon>Example1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridControl\GroupsLayout\Example2.resx">
+      <DependentUpon>Example2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridControl\GroupsLayout\Example3.resx">
+      <DependentUpon>Example3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadIS\LoadsViewer.resx">
+      <DependentUpon>LoadsViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoadIS\TemplatesForm.resx">
       <DependentUpon>TemplatesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -86,6 +132,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Data\GroupLayoutDataSet.xsc">
+      <DependentUpon>GroupLayoutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\GroupLayoutDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GroupLayoutDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\GroupLayoutDataSet.xss">
+      <DependentUpon>GroupLayoutDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,5 +169,6 @@
     </Content>
     <Content Include="LoadIS\Zone_Loads_Screens.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿using InfragisticsDev.Common.Helpers;
+﻿using Infragistics.Win;
+using Infragistics.Win.UltraWinTree;
+using InfragisticsDev.Common.Helpers;
 using InfragisticsDev.Win.DataEntities;
 using System;
 using System.Collections.Generic;
@@ -22,57 +24,29 @@ namespace InfragisticsDev.Win
 
         private void ApplicationEvents_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string xmlPath = @"D:\Repositories\GitHub\InfragisticsDevProjects\InfragisticsDev.Win\LoadIS\ZoneLoadProps.xml";
-                //XMLHelper.ToXML(xmlPath, CreateXMLStructure());
-                if (File.Exists(xmlPath))
-                {
-                    textBox1.Text = File.ReadAllText(xmlPath);
-                }
-            }
-            catch (Exception ex)
-            {
-            }
+            
         }
 
-        private TemplateProperty CreateXMLStructure()
+        private void treeViewExamples_DoubleClick(object sender, EventArgs e)
         {
-            TemplateProperty template = new TemplateProperty()
+            UltraTree tree = (UltraTree)sender;
+            UIElement element = tree.UIElement.LastElementEntered;
+            if (element == null)
+                return;
+
+            UltraTreeNode node = element.GetContext(typeof(UltraTreeNode)) as UltraTreeNode;
+            if (node == null)
+                return;
+            Form form = null;
+            switch (node.Key)
             {
-                SimModelClass = "SimTemplateOccupancyDriven",
-                Type = "Default",
-                SubType = "Default"
-            };
-
-            TemplateProperty zoneLoadsProp = new TemplateProperty()
-            {
-                PropertyName = "Loads",
-                Category = "Loads",
-                SimModelClass = "SimInternalLoad",
-                Type = "Any",
-                SubType = "Any",
-                InstanceSpeciferPropName = "Loads",
-                Properties = new List<ComponentProperty>()
-                {
-                    new TemplateProperty()
-                    {
-                    }
-                }
-            };
-
-            return template;
-
-        }
-
-        private void btnOpenTemplatesView_Click(object sender, EventArgs e)
-        {
-            using (LoadIS.TemplatesForm templatesForm = new LoadIS.TemplatesForm())
-            {
-                templatesForm.ShowDialog(this);
-
+                case "GridHybridColumnsLayout":
+                    form = new InfragisticsDev.Win.GridControl.GroupsLayout.Form3();
+                    break;
+                default:
+                    break;
             }
-           
+            form.ShowDialog();
         }
     }
 }
