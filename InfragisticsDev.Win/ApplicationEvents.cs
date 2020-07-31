@@ -46,6 +46,7 @@ namespace InfragisticsDev.Win
                 default:
                     break;
             }
+            if(form != null)
             form.ShowDialog();
         }
     }
